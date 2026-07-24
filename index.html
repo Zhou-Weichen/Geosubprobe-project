@@ -348,7 +348,7 @@ footer a{color:var(--text-soft)}
         <img src="assets/framework.png" alt="Overview of the controlled subspace intervention analysis framework: (A) Readability Gap with Linear, MLP and DPT probes; (B) SVD on converged linear weights yielding a task-aligned basis, with Aligned Subspace, Random Subspace and Orthogonal Residual paths evaluated through a fixed linear head.">
       </div>
       <figcaption><b>Overview of the framework.</b> <b>(A) Readability Gap:</b> frozen backbone features
-      <code>Z</code><sup>(l)</sup> are evaluated with three tiers (Linear, MLP, DPT) to decouple local
+      <code>Z</code><sup>(l)</sup> are evaluated with three-tier probes (Linear, MLP, DPT) to decouple local
       non-linear entanglement from global spatial fragmentation. <b>(B) Subspace Intervention:</b> without
       any additional training, we apply SVD to the converged linear weights <b>W</b> to extract a
       task-aligned basis <b>V</b><sub>k</sub>; the feature tensor is projected onto the aligned subspace
@@ -361,9 +361,8 @@ footer a{color:var(--text-soft)}
       <div class="panel">
         <span class="ptag">A &middot; Readability Gap</span>
         <h3>Three-tier probing hierarchy</h3>
-        <p>A <b>Linear</b> probe measures explicitly rectified geometry; a token-wise <b>1&times;1 MLP</b>
-        adds point-wise non-linearity (isolating <i>local entanglement</i>); a <b>DPT</b> decoder adds a
-        global receptive field (isolating <i>spatial fragmentation</i>). The gaps between tiers quantify how
+        <p>A <b>Linear</b> probe measures explicitly rectified geometry; a MLP</b> adds point-wise non-linearity (isolating <i>local entanglement</i>); 
+        a <b>DPT</b> decoder adds a global receptive field (isolating <i>spatial fragmentation</i>). The gaps between three-tier probes quantify how
         entangled vs. dispersed the geometric signal is.</p>
       </div>
       <div class="panel">
@@ -371,8 +370,8 @@ footer a{color:var(--text-soft)}
         <h3>SVD on converged probe weights</h3>
         <p>We factor <code>W = U&Sigma;V<sup>&#8868;</sup></code> and keep the top-<code>k</code> right
         singular vectors as the aligned basis. Projecting features onto <code>S<sub>k</sub></code>,
-        <code>R<sub>k</sub></code>, or the residual <code>S<sub>k</sub><sup>&#8869;</sup></code> &mdash; then
-        reading them through the <i>frozen</i> head &mdash; attributes any change purely to the geometric
+        <code>R<sub>k</sub></code>, or the residual <code>S<sub>k</sub><sup>&#8869;</sup></code>, then
+        reading them through the <i>frozen</i> head, attributes any change purely to the geometric
         capacity of that subspace.</p>
       </div>
     </div>
@@ -389,21 +388,21 @@ footer a{color:var(--text-soft)}
         <div class="num">01 / ENCODING</div>
         <h3>Pre-training dictates the format</h3>
         <p>Self-distillation (<b>DINOv2</b>) aligns explicit geometry into a linearly accessible, low-rank
-        coordinate system. Masked reconstruction (<b>MAE</b>) disperses the same signal across broader
+        coordinate system. Masked reconstruction (<b>MAE</b>) disperses the signal across broader
         spatial context, needing a global receptive field to decode.</p>
       </div>
       <div class="card">
         <div class="num">02 / COMPRESSIBILITY</div>
         <h3>Geometry is highly compressible</h3>
         <p>Across every paradigm, explicitly decodable geometry concentrates in a low-rank task-aligned
-        subspace. Dense predictive heads could be constrained to it with minimal performance loss &mdash;
+        subspace. Dense predictive heads could be constrained to it with minimal performance loss,
         motivating lightweight decoders.</p>
       </div>
       <div class="card">
         <div class="num">03 / TASK AFFINITY</div>
         <h3>Geometry peaks in the middle</h3>
         <p>Geometric precision concentrates in <b>intermediate layers</b>, then declines as deeper layers
-        shift toward semantic abstraction &mdash; revealing a layer-wise affinity that argues against a
+        shift toward semantic abstraction, revealing a layer-wise affinity that argues against a
         terminal-only feature readout.</p>
       </div>
     </div>
@@ -484,7 +483,7 @@ footer a{color:var(--text-soft)}
             row sums to 100%). The bars are read against the dashed 25% uniform line, and &sigma; is the spread
             around it &mdash; <b>lower&nbsp;&sigma; = more uniform</b>. DINOv2 (&sigma;=11.5) concentrates &gt;72% of
             its energy in the intermediate layers (l<sub>12</sub>,&nbsp;l<sub>18</sub>) then drops sharply, whereas
-            iBOT (&sigma;=2.7) hugs the uniform line and MAE (&sigma;=5.8) spreads the signal across depth.</caption>
+            iBOT (&sigma;=2.7) and MAE (&sigma;=5.8) distribute the signal more uniformly.</caption>
           </table>
         </div>
       </div>
@@ -512,7 +511,7 @@ footer a{color:var(--text-soft)}
           <img alt="Absolute recovery and recovery efficiency versus subspace rank k">
         </div>
         <figcaption><b>Fig. 2 &middot; Compressibility.</b> (a) The task-aligned subspace recovers most of the
-        signal well above the residual/random noise floor &mdash; strong redundancy. (b) Normalized to each
+        signal well above the residual/random noise floor. (b) Normalized to each
         model's full-rank baseline, MAE saturates fastest (&gt;98% by k=32), while DINOv2 converges slower,
         linearly encoding richer fine-grained geometry.</figcaption>
       </figure>
