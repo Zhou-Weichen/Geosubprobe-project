@@ -302,6 +302,9 @@ footer a{color:var(--text-soft)}
       <a class="btn" href="https://github.com/Zhou-Weichen/Geosubprobe" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 8.8 21.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5a4 4 0 0 1 1-2.7c-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7a4 4 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .3.3.6.9.6 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
         Code</a>
+      <a class="btn" href="https://zhou-weichen.github.io/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
+        Homepage</a>
       <a class="btn" href="#bibtex">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 8-4 4 4 4"/><path d="m17 8 4 4-4 4"/><path d="m14 4-4 16"/></svg>
         BibTeX</a>
@@ -546,7 +549,7 @@ footer a{color:var(--text-soft)}
       </figure>
 
       <figure class="figure span2">
-        <div class="figbox ph" style="--ar:3/1" data-src="assets/fig4_energy.png">
+        <div class="figbox ph" style="--ar:3.24/1" data-src="assets/fig4_energy.png">
           <div class="ph-label">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V8M9 20V4M14 20v-9M19 20v-5"/></svg>
             <span class="tag">assets/fig4_energy.png</span>
@@ -561,10 +564,10 @@ footer a{color:var(--text-soft)}
       </figure>
 
       <figure class="figure span2">
-        <div class="figbox ph" style="--ar:3/1" data-src="assets/fig5_layerwise.png">
+        <div class="figbox ph" style="--ar:2.97/1" data-src="assets/fig5_layerwise.jpg">
           <div class="ph-label">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M6 17c3-2 4-8 6-8s3 4 6 2"/></svg>
-            <span class="tag">assets/fig5_layerwise.png</span>
+            <span class="tag">assets/fig5_layerwise.jpg</span>
             <span class="hint">Fig. 5 &mdash; performance vs. layer index and rank</span>
           </div>
           <img alt="Layer-wise subspace analysis: performance evolution across layers and subspace ranks">
@@ -586,20 +589,6 @@ footer a{color:var(--text-soft)}
         <figcaption><b>Fig. 6 &middot; Qualitative task affinity (DINOv2).</b> Predictions decoded from frozen
         features at layers 18, 21 and 24. Surface normals, depth and semantic segmentation peak at
         <i>different</i> layers &mdash; distinct affinities set by the task objective.</figcaption>
-      </figure>
-
-      <figure class="figure fig-center">
-        <div class="figbox ph" style="--ar:1.35/1" data-src="assets/fig7_normalized.png">
-          <div class="ph-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M5 16c3 0 4-8 7-8s4 6 7 4"/></svg>
-            <span class="tag">assets/fig7_normalized.png</span>
-            <span class="hint">Fig. 7 &mdash; normalized probing performance vs. layer</span>
-          </div>
-          <img alt="Normalized probing performance for surface normal, depth and semantic segmentation across layers">
-        </div>
-        <figcaption><b>Fig. 7 &middot; Normalized probing performance.</b> Trajectories normalized to each
-        task's layer-wise peak: geometric tasks (surface normal, depth) peak and decline early, whereas
-        high-level semantic abstraction peaks latest.</figcaption>
       </figure>
 
     </div>
