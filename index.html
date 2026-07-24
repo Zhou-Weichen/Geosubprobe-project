@@ -114,6 +114,9 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,
   background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);margin-bottom:22px}
 .badge-venue .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent-2);
   box-shadow:0 0 0 0 color-mix(in srgb,var(--accent-2) 70%,transparent);animation:pulse 2.4s infinite}
+.badge-venue .oral{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff;
+  font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  padding:2px 9px;border-radius:999px;margin-left:2px}
 @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent-2) 55%,transparent)}
   70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
 .hero h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.12;letter-spacing:-.03em;
@@ -273,7 +276,7 @@ footer a{color:var(--text-soft)}
     <div class="hero-grid"></div>
   </div>
   <div class="wrap">
-    <div class="badge-venue"><span class="pulse"></span>Accepted to ECCV 2026</div>
+    <div class="badge-venue"><span class="pulse"></span>ECCV 2026 <span class="oral">Oral</span></div>
     <h1>Understanding Geometric Representations in Self-Supervised ViTs via <span class="grad">Subspace Intervention</span></h1>
 
     <div class="authors">
@@ -631,7 +634,7 @@ footer a{color:var(--text-soft)}
 
 <footer>
   <div class="wrap">
-    <p>Understanding Geometric Representations in Self-Supervised ViTs via Subspace Intervention &middot; ECCV 2026<br>
+    <p>Understanding Geometric Representations in Self-Supervised ViTs via Subspace Intervention &middot; ECCV 2026 (Oral)<br>
     <a href="https://arxiv.org/abs/2607.01987" target="_blank" rel="noopener">arXiv:2607.01987</a> &middot;
     <a href="https://github.com/Zhou-Weichen/Geosubprobe" target="_blank" rel="noopener">GitHub</a></p>
   </div>
