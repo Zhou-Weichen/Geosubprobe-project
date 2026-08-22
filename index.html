@@ -389,7 +389,7 @@ footer a{color:var(--text-soft)}
     <div class="cards">
       <div class="card">
         <div class="num">01 / ENCODING</div>
-        <h3>Pre-training dictates the format</h3>
+        <h3>Pre-training shapes how geometry is represented</h3>
         <p>Self-distillation (<b>DINOv2</b>) aligns explicit geometry into a linearly accessible, low-rank
         coordinate system. Masked reconstruction (<b>MAE</b>) disperses the signal across broader
         spatial context, needing a global receptive field to decode.</p>
@@ -397,9 +397,9 @@ footer a{color:var(--text-soft)}
       <div class="card">
         <div class="num">02 / COMPRESSIBILITY</div>
         <h3>Geometry is highly compressible</h3>
-        <p>Across every paradigm, explicitly decodable geometry concentrates in a low-rank task-aligned
-        subspace. Dense predictive heads could be constrained to it with minimal performance loss,
-        motivating lightweight decoders.</p>
+        <p>Across every paradigm, a low-rank, task-aligned subspace is sufficient to preserve 
+          and reconstruct explicitly decodable geometry. Constraining dense predictive heads to this subspace 
+          incurs minimal performance loss, motivating lightweight decoders.</p>
       </div>
       <div class="card">
         <div class="num">03 / TASK AFFINITY</div>
